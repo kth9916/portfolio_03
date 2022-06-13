@@ -1,0 +1,98 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+*{
+	font-family : 'Nanum Gothic';
+}
+h1
+{
+	font-family : 'Hanna';
+}
+h4{
+	font-family: 'Varela Round', sans-serif;
+}
+
+.service4{
+	background: radial-gradient(#fff,#ffd6d6);
+    width: 85%;
+    display: flex;
+    margin: 49px auto;
+    height: 200px;
+    padding-right: 15px;
+  	padding-left: 15px;
+    border-radius: 16px;
+    padding-bottom: 24px;
+}
+
+
+.service4 p{
+	margin-bottom: 15px;
+ 	font-size: 21px;
+  	font-weight: 200;
+}
+.service4 > .contents4{
+    padding: 20px;
+}
+
+.service4 > .contents4 > h2{
+    margin-bottom: 27px;
+}
+
+
+
+.service5{
+    width: 85%;
+    display: flex;
+    margin: 49px auto;
+    height: 200px;
+    padding-right: 15px;
+  	padding-left: 15px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background-color:#0ceabd4f;
+    padding-bottom: 24px;
+}
+
+.service5 p{
+	margin-bottom: 15px;
+ 	font-size: 21px;
+  	font-weight: 200;
+}
+.service5 > .contents5{
+    padding: 20px;
+}
+
+.service5 > .contents5 > h2{
+    margin-bottom: 27px;
+}
+
+
+
+.service6{
+    width: 85%;
+    display: flex;
+    margin: 49px auto;
+    height: 200px;
+    margin-top:-49px;
+    padding-top: 20px;
+    padding-right: 15px;
+  	padding-left: 15px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    background-color:#0ceabd4f;
+    padding-bottom: 24px;
+}
+
+.service6 p{
+	margin-bottom: 15px;
+ 	font-size: 21px;
+  	font-weight: 200;
+}
+.service6 > .contents6{
+    padding: 20px;
+}
+
+.service6 > .contents6 > h2{
+    margin-bottom: 27px;
+}

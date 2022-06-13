@@ -1,0 +1,10 @@
+@charset "utf-8";
+*{margin:0px; padding:0px;}
+.wrap{width: 1100px; margin:0 auto; padding-top: 100px; left:50px;}
+.pic img{width:640px; height:640px;}
+.insta{border-bottom:solid 1px black; width: 450px; margin-left: 30px;}
+.insta01 {width: 16px; height: 16px; text-align: center;}
+.insta02 {text-align: left; }
+.insta03{width:300}
+.text { text-indent:0px; margin:30px }
+.texttag { text-indent:0px; margin:30px; color: rgba(77, 77, 247, 0.767) }
