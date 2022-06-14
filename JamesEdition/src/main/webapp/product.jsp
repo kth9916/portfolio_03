@@ -84,16 +84,18 @@
         </div>
     </div>
 <!-- ------ products ---------  -->
-    <%
-	ArrayList<Product> listOfProducts = dao.getAllProductList();
-	%>
 	
+	 <%
+	ArrayList<Product> listOfProducts = dao.getProductList(product.getCategory());
+	%>
 <!-- ------ products ---------  -->
 		<div class="container">
         <div class="row" align="center">
 			<%
 				for (int i = 0; i < 4; i++) {
 					Product product2 = listOfProducts.get(i);
+					
+					
 					
 			%>
 

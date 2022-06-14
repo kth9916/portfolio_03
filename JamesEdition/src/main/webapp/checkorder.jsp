@@ -72,21 +72,24 @@
 						<td><%= list.get(i).getOjname() %></td>
 						<td><%= list.get(i).getOjprice() %></td>
 						<td><%= list.get(i).getOjqnt() %></td>
-						<td><%= list.get(i).getSumprice() %></td>
+						<td><%= list.get(i).getSumprice() %></td>		
 					</tr>
 					<%
 						}
 					%>
+
+				</tbody>
+				<tbody>
+					<tr>
+					<td><a href="mainpage.jsp" class="btn btn-success">메인화면 가기</a></td>
+					<td><a href="allproduct.jsp" class="btn btn-warning">쇼핑 계속하기</a></td>	
+					</tr>
 				</tbody>
 			</table>
 		</div>
 		<div class="row">
 			<table style="width:100%">
-				<tr>
-					<td align="left"><a href="mainpage.jsp" class="btn btn-success">메인화면 가기</a></td>
-					<td align="right"><a href="allproduct.jsp" class="btn btn-warning">쇼핑 계속하기</a></td>
-					
-				</tr>
+				
 			</table>
 		</div>
 	</div>

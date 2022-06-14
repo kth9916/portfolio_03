@@ -62,11 +62,11 @@
 			<%
 				}
 			%>
-
+			<nav style="margin-top:-20px;">
 			<%= userID %>님
-			<a href="logoutAction.jsp" class="menu-r" style="text-align:right;"><h1>Logout</h1></a>
+			<a href="logoutAction.jsp" class="menu-r" style="text-align:right;"><h2>Logout</h2></a>
 			<a href="checkorder.jsp" class="menu-r" style="margin-left:20px;text-align:right;">Order</a>
-
+			</nav>
 			
 		<%
 				}

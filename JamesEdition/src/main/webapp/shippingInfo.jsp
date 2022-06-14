@@ -117,9 +117,9 @@ function cancel() {
 						</div>
 						<div class="form-group row">
 							<div class="col-sm-offset-2 col-sm-10 " style="width:130px;" >
-								<a href="./cart.jsp>" class="btn btn-secondary" role="button"> 이전 </a> 
+								<a href="./cart.jsp>" class="btn btn-secondary" role="button" style="text-align: center;">  이전으로</a> 
 								<input	type="submit" class="btn btn-primary" value="등록" />
-								<a href="main.jsp"  class="btn btn-info" onclick="cancel()">취소하기</a> 
+								<a href="main.jsp"  class="btn btn-info" onclick="cancel()"  style="text-align: center;">취소하기</a> 
 							</div>
 						</div>
 					</form>

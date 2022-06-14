@@ -47,23 +47,18 @@
 <html>
 <head>
 <link rel="stylesheet" href="css/bootstrap.min.css" />
-<link rel="stylesheet" href="css/style.css" />
 <title>결제 확인</title>
 </head>
 <body>
 	<jsp:include page="nav.jsp" />
-	<div class="service4" style="height: 230px;">
-		<div class="gif_img" style="padding-top:20px;">
-			<a><img src="images2/1.jpg" width="200px" height="200px"></a>
-			<div id="youngjin" style="width: 200px; height: 427px"></div>
-		</div>
-		<div class="contents4">
+	<div class="service4" style="height: 80px;">
+		<div class="contents4" style="text-align:center">
 			<h2>결제 확인</h2>
 			<p>결제 확인 페이지입니다. 영수증을 꼼꼼히 확인해주세요.<br>'주문' 버튼을 누르시면 결제가 완료됩니다.</p>
 		</div>
 	</div>
 
-	<div class="container col-8 alert alert-info">
+	<div class="container col-8 alert alert-info" style="border-width:20px;">
 	<form action="./ordercomplete.jsp" method="post">
 		<div class="text-center ">
 			<h1>영수증</h1>
@@ -123,9 +118,9 @@
 			</tr>
 			</table>
 			
-				<a href="./shippingInfo.jsp?userID=<%=shipping_cartId%>"class="btn btn-warning" role="button"> 이전 </a>
-				<input	type="submit"  class="btn btn-success" value="주문" />
-				<a href="./main.jsp" class="btn btn-danger"	role="button"> 취소 </a>			
+				<a href="./shippingInfo.jsp?userID=<%=shipping_cartId%>"class="btn btn-warning" role="button" style="width:30%; text-align:center;"> 이전 </a>
+				<input	type="submit"  class="btn btn-success" value="주문" style="width:30%; text-align:center;"/>
+				<a href="./main.jsp" class="btn btn-danger"	role="button" style="width:30%; text-align:center;"> 취소 </a>			
 		</div>
 		</form>
 	</div>
