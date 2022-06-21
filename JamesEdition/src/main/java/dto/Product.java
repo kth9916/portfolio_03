@@ -11,8 +11,44 @@ public class Product{
 	private String description; //상품 설명
 	private String manufacturer;//제조사
 	private String category; 	//분류
-	private String filename; 	//이미지 파일명
+	private String ofile1; 	//이미지 파일명
+	private String ofile2; 	//작은 이미지 파일명
+	private String ofile3; 	//작은 이미지 파일명
+	private String ofile4; 	//작은 이미지 파일명
+	private String ofile5; 	//작은 이미지 파일명
 	private int quantity;		 //장바구니에 담은 개수
+
+	public String getOfile2() {
+		return ofile2;
+	}
+
+	public void setOfile2(String ofile2) {
+		this.ofile2 = ofile2;
+	}
+
+	public String getOfile3() {
+		return ofile3;
+	}
+
+	public void setOfile3(String ofile3) {
+		this.ofile3 = ofile3;
+	}
+
+	public String getOfile4() {
+		return ofile4;
+	}
+
+	public void setOfile4(String ofile4) {
+		this.ofile4 = ofile4;
+	}
+
+	public String getOfile5() {
+		return ofile5;
+	}
+
+	public void setOfile5(String ofile5) {
+		this.ofile5 = ofile5;
+	}
 
 	public Product() {
 		super();
@@ -71,12 +107,13 @@ public class Product{
 		this.category = category;
 	}
 
-	public String getFilename() {
-		return filename;
+
+	public String getOfile1() {
+		return ofile1;
 	}
 
-	public void setFilename(String filename) {
-		this.filename = filename;
+	public void setOfile1(String ofile1) {
+		this.ofile1 = ofile1;
 	}
 
 	public int getQuantity() {
@@ -87,10 +124,6 @@ public class Product{
 		this.quantity = quantity;
 	}
 
-	@Override
-	public String toString() {
-		return "Product [productId=" + productId + ", pname=" + pname + ", unitPrice=" + unitPrice + ",description=" + description
-				+ ",manufacturer=" + manufacturer + ",category=" + category + ", filename=" + filename + ", quantity=" + quantity + "]";
-	}
+
 
 }

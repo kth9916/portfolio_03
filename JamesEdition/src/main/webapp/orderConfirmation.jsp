@@ -103,9 +103,9 @@
 			%>
 			<tr>
 				<td class="text-center"><em><%=product.getPname()%> </em></td>
-				<td class="text-center"><%=product.getQuantity()%></td>
-				<td class="text-center"><%=product.getUnitPrice()%>원</td>
-				<td class="text-center"><%=total%>원</td>
+				<td class="text-center" ><%=product.getQuantity()%></td>
+				<td class="text-center" ><%=product.getUnitPrice()%>원</td>
+				<td class="text-center" ><%=total%>원</td>
 			</tr>
 			<%
 				}
@@ -113,14 +113,20 @@
 			<tr>
 				<td> </td>
 				<td> </td>
-				<td class="text-right">	<strong>총액: </strong></td>
-				<td class="text-center text-danger"><strong><%=sum%> </strong></td>
+				<td class="text-right"><h1><strong>총액: </strong></h1></td>
+				<td class="text-center text-danger"><h1><strong><%=sum%> </strong></h1></td>
 			</tr>
 			</table>
-			
-				<a href="./shippingInfo.jsp?userID=<%=shipping_cartId%>"class="btn btn-warning" role="button" style="width:30%; text-align:center;"> 이전 </a>
-				<input	type="submit"  class="btn btn-success" value="주문" style="width:30%; text-align:center;"/>
-				<a href="./main.jsp" class="btn btn-danger"	role="button" style="width:30%; text-align:center;"> 취소 </a>			
+			<div class="btnarray">
+				<ul class="btnul">
+					<li><a href="./shippingInfo.jsp?userID=<%=shipping_cartId%>" class="btn btn-primary" role="button" style="width:30%;"> 이전 </a></li>
+					<li><input	type="submit"  class="btn btn-primary" value="주문" style="width:30%;"/></li>
+					<li><a href="./main.jsp" class="btn btn-primary"	role="button" style="width:30%;"> 취소 </a></li>
+				</ul>
+			</div>
+				
+
+							
 		</div>
 		</form>
 	</div>

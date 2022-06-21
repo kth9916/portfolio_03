@@ -28,6 +28,24 @@ nav ul {
     list-style-type: none;
 }
 
+.text-center{
+	text-align:center;
+}
+
+.ordercon{
+	display:inline-block
+}
+
+.btn-order{
+	widht:30%;
+	text-align:center;
+}
+
+.ulright{
+	display: inline-block;
+	float:right;
+}
+
 nav ul li {
     display: inline-block;
     margin-right: 20px;
@@ -135,6 +153,12 @@ button:hover{
     border: 2px solid #fff;
 }
 
+.btnarray{
+	display:inline-block;
+	text-align:center;
+	width:100%
+}
+
 
 .row {
     display: flex;
@@ -165,9 +189,20 @@ button:hover{
     transition: background 0.5s;
 }
 
+.btn2{
+	transition: background 0.5s;
+	border:black;
+}
+
+.btn2:hover{
+    background: blue;
+}
+
 .btn:hover{
     background: #563434;
 }
+
+
 
 .header{
     background: radial-gradient(rgb(248, 248, 248),#faf9fa);
@@ -603,6 +638,7 @@ table{
 .cart-info{
     display: flex;
     flex-wrap: wrap;
+    width:800px;
 }
 .cart-page th{
     text-align: left;

@@ -38,7 +38,7 @@
 						Product product = listOfProducts.get(i);
 			%>
 			<div class="col-md-4">
-				<a href="./product.jsp?id=<%=product.getProductId()%>"><img src ="./images2/<%=product.getFilename()%>.jpg" style ="width: 80%"> </a>
+				<a href="./product.jsp?id=<%=product.getProductId()%>"><img src ="./uploads/<%=product.getOfile1()%>" style ="width: 80%"> </a>
                 <a href="./product.jsp?id=<%=product.getProductId()%>"><h4><%=product.getPname() %></h4></a>
                 <div class="rating">
                     <i class="fa-solid fa-star"></i>

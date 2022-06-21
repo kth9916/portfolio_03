@@ -79,19 +79,14 @@
 					%>
 
 				</tbody>
-				<tbody>
-					<tr>
-					<td><a href="mainpage.jsp" class="btn btn-success">메인화면 가기</a></td>
-					<td><a href="allproduct.jsp" class="btn btn-warning">쇼핑 계속하기</a></td>	
-					</tr>
-				</tbody>
+
 			</table>
 		</div>
-		<div class="row">
-			<table style="width:100%">
-				
-			</table>
-		</div>
+
+	</div>
+	<div class="btnarray">
+		<a href="mainpage.jsp" class="btn btn-success">메인화면 가기</a>
+		<a href="allproduct.jsp" class="btn btn-warning">쇼핑 계속하기</a>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>

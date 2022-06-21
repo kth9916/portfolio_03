@@ -7,14 +7,18 @@ create table user1(
  );
  
  
- create table product(
+  create table product4(
  productId NUMBER not null,
  pname varchar2(2000) not null,
  unitPrice varchar2(50) not null,
  description varchar2(4000) not null,
  manufacturer varchar2(50) not null,
  category varchar2(50) not null,
- filename varchar2(200) not null,
+ ofile1 varchar2(200) not null,
+ ofile2 varchar2(200),
+ ofile3 varchar2(200),
+ ofile4 varchar2(200),
+ ofile5 varchar2(200),
  quantity varchar2(50) not null
  );
  
@@ -25,12 +29,6 @@ create sequence productId
  start with 1
  
  
-update product
-set filename='36'
-where filename='ÆíÁý_p-36-1.jpg';
-
-
-
 create table cart(
     name varchar2(200),
     price int,

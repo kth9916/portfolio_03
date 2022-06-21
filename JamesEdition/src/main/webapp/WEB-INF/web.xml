@@ -17,7 +17,7 @@
   </welcome-file-list>
   
   
-  <!-- 오라클 데이타 베이스 접속 정보
+  <!-- 오라클 데이타 베이스 접속 정보-->
   <context-param>
   	<param-name>OracleDriver</param-name>
   	<param-value>oracle.jdbc.OracleDriver</param-value>
@@ -37,11 +37,11 @@
     <param-name>OraclePwd</param-name>
   	<param-value>1234</param-value>
   </context-param>
-    -->
+    
     
   <!--  세션 유지 기간 설정 (20분동안 세션 유지  -->
   <session-config>
-  	<session-timeout>30</session-timeout>
+  	<session-timeout>20</session-timeout>
   </session-config>
   
   <!-- 한글 깨짐 방지를 위한 설정 (이 프로젝트의 모든 페이지에 대해서 설정)  -->

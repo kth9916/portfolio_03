@@ -49,27 +49,35 @@ public class ProductDAO extends DBConnPool{
 	 * 1번 기능 : 상품 등록
 	 * register(Product)
 	 */
-	public void register(Product vo) throws SQLException {
+	public int register(Product vo){
 
+		int result = 0;
 		try {
-			StringBuilder sql = new StringBuilder();
-			sql.append("INSERT INTO product(productId, pname, unitPrice, description, manufacturer, category, filename, quantity) ");
-			sql.append("VALUES (productId.nextval, ?, ?, ?, ?,?,?,?)");
+			String sql = "INSERT INTO product4(productId, pname, unitPrice, description, manufacturer, category, ofile1, ofile2, ofile3, ofile4, ofile5, quantity) "
+					+ "VALUES (productId.nextval, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			
-			pstmt = conn.prepareStatement(sql.toString());
+			pstmt = conn.prepareStatement(sql);
+			
 			pstmt.setString(1, vo.getPname());
 			pstmt.setInt(2, vo.getUnitPrice());
 			pstmt.setString(3, vo.getDescription());
 			pstmt.setString(4, vo.getManufacturer());
 			pstmt.setString(5, vo.getCategory());
-			pstmt.setString(6, vo.getFilename());
-			pstmt.setInt(7, vo.getQuantity());
+			pstmt.setString(6, vo.getOfile1());
+			pstmt.setString(7, vo.getOfile2());
+			pstmt.setString(8, vo.getOfile3());
+			pstmt.setString(9, vo.getOfile4());
+			pstmt.setString(10, vo.getOfile5());
+			pstmt.setInt(11, vo.getQuantity());
 			
-			pstmt.executeUpdate();
+			result = pstmt.executeUpdate();
 			
-		} finally {
+		} catch(Exception e) {
+			e.printStackTrace();
+			System.out.println("상품 등록 중 예외 발생");
 			
 		}
+		return result;
 	}
 	
 	/*
@@ -81,7 +89,7 @@ public class ProductDAO extends DBConnPool{
 	
 		
 		try {
-			String sql = "SELECT * from product order by productId";
+			String sql = "SELECT * from product4 order by productId";
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			
@@ -93,8 +101,12 @@ public class ProductDAO extends DBConnPool{
 				vo.setDescription(rs.getString(4));
 				vo.setManufacturer(rs.getString(5));
 				vo.setCategory(rs.getString(6));
-				vo.setFilename(rs.getString(7));
-				vo.setQuantity(rs.getInt(8));
+				vo.setOfile1(rs.getString(7));
+				vo.setOfile2(rs.getString(8));
+				vo.setOfile3(rs.getString(9));
+				vo.setOfile4(rs.getString(10));
+				vo.setOfile5(rs.getString(11));
+				vo.setQuantity(rs.getInt(12));
 				
 				list.add(vo);
 			}
@@ -110,7 +122,7 @@ public class ProductDAO extends DBConnPool{
 		ArrayList<Product> list2 = new ArrayList<Product>();
 
 		try {
-			String sql = "SELECT * from product where category=?";
+			String sql = "SELECT * from product4 where category=?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, category);
 			rs = pstmt.executeQuery();
@@ -125,8 +137,12 @@ public class ProductDAO extends DBConnPool{
 				vo.setDescription(rs.getString(4));
 				vo.setManufacturer(rs.getString(5));
 				vo.setCategory(rs.getString(6));
-				vo.setFilename(rs.getString(7));
-				vo.setQuantity(rs.getInt(8));
+				vo.setOfile1(rs.getString(7));
+				vo.setOfile2(rs.getString(8));
+				vo.setOfile3(rs.getString(9));
+				vo.setOfile4(rs.getString(10));
+				vo.setOfile5(rs.getString(11));
+				vo.setQuantity(rs.getInt(12));
 				
 				list2.add(vo);
 			}
@@ -149,7 +165,7 @@ public class ProductDAO extends DBConnPool{
 			PreparedStatement pstmt = null;
 			ResultSet rs = null;
 			
-			String sql = "SELECT * FROM product WHERE productId=?";
+			String sql = "SELECT * FROM product4 WHERE productId=?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, productId);
 			rs = pstmt.executeQuery();
@@ -162,7 +178,11 @@ public class ProductDAO extends DBConnPool{
 				vo.setDescription(rs.getString("description"));
 				vo.setManufacturer(rs.getString("manufacturer"));
 				vo.setCategory(rs.getString("category"));
-				vo.setFilename(rs.getString("filename"));
+				vo.setOfile1(rs.getString("ofile1"));
+				vo.setOfile2(rs.getString("ofile2"));
+				vo.setOfile3(rs.getString("ofile3"));
+				vo.setOfile4(rs.getString("ofile4"));
+				vo.setOfile5(rs.getString("ofile5"));
 				vo.setQuantity(rs.getInt("quantity"));
 			}
 				

@@ -27,11 +27,11 @@
 			                        <input name="userEmail" size="20" type="email" placeholder="E-mail" maxlength="50">
 			                        <div class="form-group" style="text-align: center;">
 				                        <div class="btn-group" data-toggle="buttons">
-											<label class="btn btn-primary active" style="width:114px">
-												<input type="radio" name="userGender" autocomplete="off" value="남자" checked>남자
+											<label  style="width:105px">
+												<input style="width:30%;" type="radio" name="userGender" autocomplete="off" value="남자" checked>남자
 											</label>
-											<label class="btn btn-primary" style="width:114px">
-												<input type="radio" name="userGender" autocomplete="off" value="여자" checked>여자
+											<label style="width:105px">
+												<input style="width:30%;" type="radio" name="userGender" autocomplete="off" value="여자" checked>여자
 											</label>
 										</div>
 										

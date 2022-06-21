@@ -17,9 +17,7 @@ public class HandlerMapping {
 	//create(String command) : Controller 객체 생성 메서드
 	public Controller create(String command) {
 		Controller controller = null;
-		if (command.contentEquals("register"))
-			controller = new RegisterProductController();
-		else if (command.contentEquals("getlist"))
+		if (command.contentEquals("getlist"))
 			controller = new ProductListController();
 		else if (command.contentEquals("detailproduct"))
 			controller = new ProductInfoController();

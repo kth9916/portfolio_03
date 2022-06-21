@@ -17,7 +17,7 @@
     <script src="js/jquery-1.11.0.min.js"></script>
 </head>
 <body onload="slider()">
-	<jsp:include page="nav.jsp" />
+	<%@ include file="nav.jsp" %>
 	 <div class="banner">
             <div class="slider">
                 <img src="images2/highest home.jpg" id="slideImg">
@@ -62,6 +62,7 @@
         </div>
     </div>
     
+    
     <%
 	ProductDAO dao = ProductDAO.getInstance();
 	ArrayList<Product> listOfProducts = dao.getAllProductList();
@@ -82,7 +83,7 @@
 					
 			%>
 			<div class="col-md-4">
-				<a href="./product.jsp?id=<%=product.getProductId()%>"><img src ="./images2/<%=product.getFilename()%>.jpg" style ="width: 80%"> </a>
+				<a href="./product.jsp?id=<%=product.getProductId()%>"><img src ="./uploads/<%=product.getOfile1()%>" style ="width: 80%"> </a>
                 <a href="./product.jsp?id=<%=product.getProductId()%>"><h4><%=product.getPname() %></h4></a>
                 <div class="rating">
                     <i class="fa-solid fa-star"></i>
@@ -114,7 +115,7 @@
 					
 			%>
 			<div class="col-md-4">
-				<a href="./product.jsp?id=<%=product.getProductId()%>"><img src ="./images2/<%=product.getFilename()%>.jpg" style ="width: 80%"> </a>
+				<a href="./product.jsp?id=<%=product.getProductId()%>"><img src ="./uploads/<%=product.getOfile1()%>" style ="width: 80%"> </a>
                 <a href="./product.jsp?id=<%=product.getProductId()%>"><h4><%=product.getPname() %></h4></a>
                 <div class="rating">
                     <i class="fa-solid fa-star"></i>

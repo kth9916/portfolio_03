@@ -7,6 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Map;
 
 public class BbsDAO {
 
@@ -26,19 +27,27 @@ public class BbsDAO {
 		}
 	}	
 	
-	public String getDate() {
-		String SQL = "SELECT sysdate";
+	//select(list)
+	public int selectCount( Map<String, Object> map ) {
+		int totalCount = 0; 
+		String sql = "SELECT COUNT(*) FROM BBS";    //레코드의 총갯수 반환 ,  
+			if (map.get("searchWord") != null) {			// 검색기능을 사용했을시 where 
+				sql += " Where " + map.get("searchField") + " " + "like '%" + map.get("searchWord") + "%'"; 
+			}
 		try {
-			stmt = conn.createStatement();
-			stmt.executeQuery(SQL);
-			
+			stmt = conn.createStatement(); 
+			rs = stmt.executeQuery(sql);
+			rs.next(); 
+			totalCount = rs.getInt(1); 
 			
 		} catch (Exception e) {
+			System.out.println("게시물 카운트중 예외 발생");
 			e.printStackTrace();
 		}
-		return ""; //데이터베이스 오류
-	}
-		
+					
+		return totalCount; 
+	}	
+	
 	public int getNext() {
 		String SQL = "SELECT bbsID FROM BBS ORDER BY bbsID DESC";
 		try {
@@ -55,15 +64,14 @@ public class BbsDAO {
 	}
 	
 	public int write(String bbsTitle, String userID, String bbsContent) {
-		String SQL = "INSERT INTO BBS VALUES (?, ?, ?, ?, ?, ?)";
+		String SQL = "INSERT INTO BBS VALUES (?, ?, ?, default, ?, ?)";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
 			pstmt.setInt(1, getNext());
 			pstmt.setString(2, bbsTitle);
 			pstmt.setString(3, userID);
-			pstmt.setString(4, getDate());
-			pstmt.setString(5, bbsContent);
-			pstmt.setInt(6, 1);
+			pstmt.setString(4, bbsContent);
+			pstmt.setInt(5, 1);
 			return pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();

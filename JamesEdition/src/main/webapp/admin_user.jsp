@@ -56,7 +56,7 @@
 		</div>
 	</div>
 	<div class="container">
-		<div class="row">
+		<div class="row" style="width:80%;">
 			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
 				<thead>
 					<tr>
@@ -104,7 +104,7 @@
 						<td><%= rs.getString("userName") %></td>
 						<td><%= rs.getString("userGender") %></td>
 						<td><%= rs.getString("userEmail") %></td>
-						<td><a href="./process_admin_user.jsp?userid=<%= rs.getString("userID") %>" class="badge badge-danger">강제삭제</a></td>
+						<td style="text-align:center;"><a href="./process_admin_user.jsp?userid=<%= rs.getString("userID") %>" class="badge badge-danger">강제삭제</a></td>
 					</tr>
 					<%
 			            }

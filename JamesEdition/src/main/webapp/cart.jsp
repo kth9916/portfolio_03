@@ -77,7 +77,7 @@ pstmt.executeUpdate();
         <tr>
             <td><a href="./product.jsp?id=<%=product.getProductId()%>">
                     <div class="cart-info">
-                        <img src ="images2/초미니-<%=product.getFilename()%>.jpg">
+                        <img src ="./uploads/<%=product.getOfile1()%>" style="width: 80px; height:80px;">
                         <div>
                             <p><%=product.getPname()%></p>
                             <small><%=product.getUnitPrice() %></small>
@@ -114,11 +114,11 @@ pstmt.executeUpdate();
     <div class="total-price">
         <table>
             <tr>
-                <td>Subtotal</td>
+                <td>Total</td>
                 <td><h2><%=sum%></h2></td>
-                <td><a href="./shippingInfo.jsp?userID=<%= userID %>" class="btn" style="height:90px;">주문하기</a></td>
-                <td><a href="./deleteCart.jsp?cartId=<%=userID%>" class="btn" style="height:90px;">전체삭제</a></td>
-				<td><a href="./mainpage.jsp" class="btn" style="height:90px;">계속쇼핑</a></td>
+                <td><a href="./shippingInfo.jsp?userID=<%= userID %>" class="btn2" style="height:90px;">주문하기</a></td>
+                <td><a href="./deleteCart.jsp?cartId=<%=userID%>" class="btn2" style="height:90px;">전체삭제</a></td>
+				<td><a href="./mainpage.jsp" class="btn2" style="height:90px;">계속쇼핑</a></td>
             </tr>
         </table>
 

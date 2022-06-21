@@ -58,7 +58,7 @@
 		</div>
 	</div>
 	<div class="container">
-		<div class="row">
+		<div class="row" style="width:80%;">
 			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
 				<thead>
 					<tr>
@@ -110,7 +110,7 @@
 						<td><%= rs.getString("ojname") %></td>
 						<td><%= rs.getInt("ojprice") %></td>
 						<td><%= rs.getInt("ojqnt") %></td>
-						<td><%= rs.getInt("sumprice") %></td>
+						<td style="text-align:center;"><%= rs.getInt("sumprice") %></td>
 					</tr>
 					<%
 			            }

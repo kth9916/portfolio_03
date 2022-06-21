@@ -39,19 +39,19 @@
     <div class="small-container single-product">
         <div class="row">
             <div class="col-2">
-            <img src="images2/<%=product.getFilename()%>.jpg" style="width: 100%" id="ProductImg">
+            <img src="./uploads/<%=product.getOfile1()%>" style="width: 100%" id="ProductImg">
                 <div class="small-img-row">
                     <div class="small-img-col">
-                        <img src="images2/<%=product.getFilename()%>-2.jpg"  width="100%" class="small-img">
+                        <img src="./uploads/<%=product.getOfile2()%>"  width="100%" class="small-img">
                     </div>
                     <div class="small-img-col">
-                        <img src="images2/<%=product.getFilename()%>-3.jpg" width="100%" class="small-img">
+                        <img src="./uploads/<%=product.getOfile3()%>" width="100%" class="small-img">
                     </div>
                     <div class="small-img-col">
-                        <img src="images2/<%=product.getFilename()%>-4.jpg" class="small-img">
+                        <img src="./uploads/<%=product.getOfile4()%>" class="small-img">
                     </div>
                     <div class="small-img-col">
-                        <img src="images2/<%=product.getFilename()%>-5.jpg" width="100%" class="small-img">
+                        <img src="./uploads/<%=product.getOfile5()%>" width="100%" class="small-img">
                     </div>
                 </div>
             </div>
@@ -62,9 +62,9 @@
                 <h2><%=product.getPname() %></h2>
                 <h4><%=product.getUnitPrice() %></h4>
                 <p><b>수량</b><input type="text" name="count" value="1" size="3" >
-                <a href="#" class="btn btn-info" onclick="addToCart()" style="width:160px;">Add To Watchlist</a> 
-                <a href="./cart.jsp" class="btn" style="width:160px;">go To Watchlist</a>
-                <a href="mainpage.jsp" class="btn" style="width:160px;">상품 목록</a>
+                <a href="#" class="btn btn-info" onclick="addToCart()" style="width:160px; text-align:center;">Add To cart</a> 
+                <a href="./cart.jsp" class="btn" style="width:160px; text-align:center;">go To cart</a>
+                <a href="mainpage.jsp" class="btn" style="width:160px; text-align:center;">상품 목록</a>
                 </div>
                 <h3>Product Details <i class="fa-solid fa-indent"></i></h3>
                 <br><br>
@@ -100,7 +100,7 @@
 			%>
 
 			<div class="col-4">
-				<a href="./product.jsp?id=<%=product2.getProductId()%>"><img src ="./images2/<%=product2.getFilename()%>.jpg" style ="width: 80%"> </a>
+				<a href="./product.jsp?id=<%=product2.getProductId()%>"><img src ="./uploads/<%=product.getOfile1()%>" style ="width: 80%"> </a>
                 <a href="./product.jsp?id=<%=product2.getProductId()%>"><h4><%=product2.getPname() %></h4></a>
                 <div class="rating">
                     <i class="fa-solid fa-star"></i>

@@ -35,7 +35,7 @@
     
     <%
 	ProductDAO dao = ProductDAO.getInstance();
-	ArrayList<Product> listOfProducts = dao.getProductList("Great Jets");
+	ArrayList<Product> listOfProducts = dao.getProductList("Jet");
 	%>
         <br><br>
 	<h1 style="text-align:center;">가끔은 하늘에서 내려다보시는게 어떨까요?</h1><br>
@@ -58,7 +58,7 @@
 			
 			
 			<div class="col-md-4">
-				<a href="./product.jsp?id=<%=product.getProductId()%>"><img src ="./images2/<%=product.getFilename()%>.jpg" style ="width: 80%"> </a>
+				<a href="./product.jsp?id=<%=product.getProductId()%>"><img src ="./uploads/<%=product.getOfile1()%>" style ="width: 80%"> </a>
                 <a href="./product.jsp?id=<%=product.getProductId()%>"><h4><%=product.getPname() %></h4></a>
                 <div class="rating">
                     <i class="fa-solid fa-star"></i>

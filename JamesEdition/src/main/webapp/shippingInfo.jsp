@@ -93,25 +93,25 @@ function cancel() {
 						</div>
 						<div class="form-group row">
 							<label class="col-sm-2">생년월일 앞자리</label>
-							<div class="col-sm-5">
+							<div class="col-sm-3">
 								<input name="birth" type="text" class="form-control" placeholder="ex) 970124" />
 							</div>
 						</div>
 						<div class="form-group row">
 							<label class="col-sm-2">수신인</label>
-							<div class="col-sm-5">
+							<div class="col-sm-3">
 								<input name="name" type="text" class="form-control"/>
 							</div>
 						</div>
 						<div class="form-group row">
 							<label class="col-sm-2">주소</label>
-							<div class="col-sm-5">
+							<div class="col-sm-3">
 								<input name="addressName" type="text" class="form-control" />
 							</div>
 						</div>
 						<div class="form-group row">
 							<label class="col-sm-2">배송일</label>
-							<div class="col-sm-5">
+							<div class="col-sm-3">
 								<input name="shippingDate" type="text" class="form-control" placeholder="ex) XXXX-XX-XX"/>
 							</div>
 						</div>
