@@ -31,7 +31,7 @@
 	
 	<div class="service4" style="height: 230px;">
 		<div class="gif_img">
-			<a><img src="images2/4.jpg" width="230px" height="230px"></a>
+			<a><img src="images2/highest car.jpg" width="230px" height="230px"></a>
 			<div id="youngjin" style="width: 200px; height: 427px"></div>
 		</div>
 		<div class="contents4">
@@ -42,7 +42,7 @@
 	
 	<div class="container">
 		<div class="row">
-			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd; width:1000px;">
+			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd; width:2000px;">
 				<thead>
 					<tr>
 						<th style="background-color: #eeeeee; text-align: center;">번호</th>
@@ -85,7 +85,15 @@
 		
 	</div>
 	<div id="wrapper">
-	<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
+	<%
+		String userID = null;
+	if (session.getAttribute("userID") != null) {
+		userID = (String) session.getAttribute("userID");
+	
+
+	%>
+	<a href="write.jsp" class="btn btn-primary">글쓰기</a>
+	<%} %>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>

@@ -9,7 +9,7 @@
 </head>
 <body>
 	<script>
-		location.href = 'mainpage.jsp';
+		location.href = 'register-form.jsp';
 	</script>
 </body>
 </html>

@@ -79,8 +79,11 @@ public class productController extends HttpServlet{
 			
 			oldFile1.renameTo(newFile1);
 			
-			//DTO에 Settor 주입 (조건 : 파일을 업로드 한 경우에만)
+			//DTO에 Setter 주입 (조건 : 파일을 업로드 한경우 에만 )
+			String realpath1 = saveDirectory + "\\"+newFileName1;
+			System.out.println(realpath1);
 			
+			dto.setRealpath1(realpath1);
 			
 			dto.setOfile1(newFileName1); // 서버에 저장될  파윌이름
 			
@@ -100,8 +103,12 @@ public class productController extends HttpServlet{
 			
 			oldFile2.renameTo(newFile2);
 			
-			//DTO에 Settor 주입 (조건 : 파일을 업로드 한 경우에만)
+			//DTO에 Setter 주입 (조건 : 파일을 업로드 한경우 에만 )
+
+			String realpath2 = saveDirectory + "\\"+newFileName2;
+			System.out.println(realpath2);
 			
+			dto.setRealpath2(realpath2);
 			
 			dto.setOfile2(newFileName2); // 서버에 저장될  파윌이름
 			
@@ -122,7 +129,10 @@ public class productController extends HttpServlet{
 			oldFile3.renameTo(newFile3);
 			
 			//DTO에 Settor 주입 (조건 : 파일을 업로드 한 경우에만)
+			String realpath3 = saveDirectory + "\\"+newFileName3;
+			System.out.println(realpath3);
 			
+			dto.setRealpath3(realpath3);
 			
 			dto.setOfile3(newFileName3); // 서버에 저장될  파윌이름
 			
@@ -143,7 +153,10 @@ public class productController extends HttpServlet{
 			oldFile4.renameTo(newFile4);
 			
 			//DTO에 Settor 주입 (조건 : 파일을 업로드 한 경우에만)
+			String realpath4 = saveDirectory + "\\"+newFileName4;
+			System.out.println(realpath4);
 			
+			dto.setRealpath4(realpath4);
 			
 			dto.setOfile4(newFileName4); // 서버에 저장될  파윌이름
 			
@@ -164,7 +177,10 @@ public class productController extends HttpServlet{
 			oldFile5.renameTo(newFile5);
 			
 			//DTO에 Settor 주입 (조건 : 파일을 업로드 한 경우에만)
+			String realpath5 = saveDirectory + "\\"+newFileName5;
+			System.out.println(realpath5);
 			
+			dto.setRealpath5(realpath5);
 			
 			dto.setOfile5(newFileName5); // 서버에 저장될  파윌이름
 		}

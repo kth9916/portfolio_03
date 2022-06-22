@@ -41,8 +41,6 @@
 			<ul class="ulright">
 			<li><a href="login.jsp" class="menu-r">로그인</a></li>
 			<li><a href="join.jsp" class="menu-r">회원가입</a></li>
-			<li><a href="cart.jsp"><img src="images2/bookmark-regular.svg" width="40px" height="30px"></a>
-                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()"></li>
 			</ul>
 			</nav>
 			</div>
@@ -59,6 +57,7 @@
 			<ul class="ulright">
 			<li><a href="admin_order.jsp" style="color:red;">전체회원 주문내역</a></li>
 			<li><a href="admin_user.jsp" style="color:red;">전체회원 정보내역</a></li>
+			<li><a href="admin_product.jsp" style="color:red;">전체상품 등록내역</a></li>
 			<li><a href="register-form.jsp" style="color:red;">상품 등록</a></li>
 			</ul>
 			</nav>

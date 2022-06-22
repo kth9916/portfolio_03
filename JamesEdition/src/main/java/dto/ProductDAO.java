@@ -53,8 +53,8 @@ public class ProductDAO extends DBConnPool{
 
 		int result = 0;
 		try {
-			String sql = "INSERT INTO product4(productId, pname, unitPrice, description, manufacturer, category, ofile1, ofile2, ofile3, ofile4, ofile5, quantity) "
-					+ "VALUES (productId.nextval, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			String sql = "INSERT INTO product4(productId, pname, unitPrice, description, manufacturer, category, ofile1, ofile2, ofile3, ofile4, ofile5, quantity, realpath1, realpath2, realpath3, realpath4, realpath5) "
+					+ "VALUES (productId.nextval, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			
 			pstmt = conn.prepareStatement(sql);
 			
@@ -69,6 +69,11 @@ public class ProductDAO extends DBConnPool{
 			pstmt.setString(9, vo.getOfile4());
 			pstmt.setString(10, vo.getOfile5());
 			pstmt.setInt(11, vo.getQuantity());
+			pstmt.setString(12, vo.getRealpath1());
+			pstmt.setString(13, vo.getRealpath2());
+			pstmt.setString(14, vo.getRealpath3());
+			pstmt.setString(15, vo.getRealpath4());
+			pstmt.setString(16, vo.getRealpath5());
 			
 			result = pstmt.executeUpdate();
 			
@@ -107,6 +112,11 @@ public class ProductDAO extends DBConnPool{
 				vo.setOfile4(rs.getString(10));
 				vo.setOfile5(rs.getString(11));
 				vo.setQuantity(rs.getInt(12));
+				vo.setRealpath1(rs.getString(13));
+				vo.setRealpath2(rs.getString(14));
+				vo.setRealpath3(rs.getString(15));
+				vo.setRealpath4(rs.getString(16));
+				vo.setRealpath5(rs.getString(17));
 				
 				list.add(vo);
 			}
@@ -143,6 +153,11 @@ public class ProductDAO extends DBConnPool{
 				vo.setOfile4(rs.getString(10));
 				vo.setOfile5(rs.getString(11));
 				vo.setQuantity(rs.getInt(12));
+				vo.setRealpath1(rs.getString(13));
+				vo.setRealpath2(rs.getString(14));
+				vo.setRealpath3(rs.getString(15));
+				vo.setRealpath4(rs.getString(16));
+				vo.setRealpath5(rs.getString(17));
 				
 				list2.add(vo);
 			}
@@ -184,6 +199,11 @@ public class ProductDAO extends DBConnPool{
 				vo.setOfile4(rs.getString("ofile4"));
 				vo.setOfile5(rs.getString("ofile5"));
 				vo.setQuantity(rs.getInt("quantity"));
+				vo.setRealpath1(rs.getString("realpath1"));
+				vo.setRealpath2(rs.getString("realpath2"));
+				vo.setRealpath3(rs.getString("realpath3"));
+				vo.setRealpath4(rs.getString("realpath4"));
+				vo.setRealpath5(rs.getString("realpath5"));
 			}
 				
 		} finally {

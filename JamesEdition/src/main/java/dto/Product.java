@@ -17,6 +17,53 @@ public class Product{
 	private String ofile4; 	//작은 이미지 파일명
 	private String ofile5; 	//작은 이미지 파일명
 	private int quantity;		 //장바구니에 담은 개수
+	private String realpath1;
+	private String realpath2;
+	private String realpath3;
+	private String realpath4;
+	private String realpath5;
+	
+
+
+	public String getRealpath1() {
+		return realpath1;
+	}
+
+	public void setRealpath1(String realpath1) {
+		this.realpath1 = realpath1;
+	}
+
+	public String getRealpath2() {
+		return realpath2;
+	}
+
+	public void setRealpath2(String realpath2) {
+		this.realpath2 = realpath2;
+	}
+
+	public String getRealpath3() {
+		return realpath3;
+	}
+
+	public void setRealpath3(String realpath3) {
+		this.realpath3 = realpath3;
+	}
+
+	public String getRealpath4() {
+		return realpath4;
+	}
+
+	public void setRealpath4(String realpath4) {
+		this.realpath4 = realpath4;
+	}
+
+	public String getRealpath5() {
+		return realpath5;
+	}
+
+	public void setRealpath5(String realpath5) {
+		this.realpath5 = realpath5;
+	}
 
 	public String getOfile2() {
 		return ofile2;

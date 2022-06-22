@@ -28,13 +28,19 @@
 <body>
 	<jsp:include page="nav.jsp" />
 	
+
+
+
 	<%
+	
 		String id = request.getParameter("id");
 		ProductDAO dao = ProductDAO.getInstance();
 		Product product = dao.findProductById(id);
+	
 	%>
 	
 	<!-- --------  single product details ----------  -->
+	
 <div class="ppage">
     <div class="small-container single-product">
         <div class="row">
@@ -62,13 +68,17 @@
                 <h2><%=product.getPname() %></h2>
                 <h4><%=product.getUnitPrice() %></h4>
                 <p><b>수량</b><input type="text" name="count" value="1" size="3" >
+
+					
+
                 <a href="#" class="btn btn-info" onclick="addToCart()" style="width:160px; text-align:center;">Add To cart</a> 
                 <a href="./cart.jsp" class="btn" style="width:160px; text-align:center;">go To cart</a>
                 <a href="mainpage.jsp" class="btn" style="width:160px; text-align:center;">상품 목록</a>
                 </div>
                 <h3>Product Details <i class="fa-solid fa-indent"></i></h3>
                 <br><br>
-                <%=product.getDescription() %>
+                <details><%=product.getDescription() %></details>
+                
                 
                </form>
             </div>
@@ -94,9 +104,7 @@
 			<%
 				for (int i = 0; i < 4; i++) {
 					Product product2 = listOfProducts.get(i);
-					
-					
-					
+			
 			%>
 
 			<div class="col-4">
@@ -161,6 +169,7 @@
             ProductImg.src = SmallImg[3].src;
         }
     </script>
+
 	
 </body>
 </html>

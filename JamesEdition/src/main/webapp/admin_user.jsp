@@ -46,7 +46,7 @@
 	<jsp:include page="nav.jsp" />
 	<div class="service4" style="height: 230px;">
 		<div class="gif_img">
-			<a><img src="images2/1.jpg" width="230px" height="230px"></a>
+			<a><img src="images2/highest yacht.jpg" width="230px" height="230px"></a>
 			<div id="youngjin" style="width: 200px; height: 427px"></div>
 		</div>
 		<div class="contents4">

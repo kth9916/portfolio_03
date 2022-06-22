@@ -34,7 +34,7 @@
 	<jsp:include page="nav.jsp" />
 	<div style="width:100%; ">
 		<div class="row">
-		<table class="table table-striped" style="border: 1px solid #dddddd; width:60%" >
+		<table class="table table-striped" style="border: 1px solid #dddddd; width:80%" >
 			<thead>
 				<tr>
 					<th colspan="3" style="background-color: #eeeeee; text-align: center;">게시판 글 보기</th>
@@ -65,11 +65,14 @@
 		%>
 			<a href="update.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">수정</a>
 			<a onclick="return confirm('정말로 삭제하시겠습니까?')" href="deleteAction.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">삭제</a>
+			<a href="write.jsp" class="btn btn-primary">글쓰기</a>
 		<%
-			}
+			}else if (userID != null && userID.equals("admin")){
 		%>
+			<a onclick="return confirm('정말로 삭제하시겠습니까?')" href="deleteAction.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">삭제</a>
+			<a href="write.jsp" class="btn btn-primary">글쓰기</a>
+		<%} %>
 		
-		<a href="write.jsp" class="btn btn-primary">글쓰기</a>
 		</div>
 	
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
