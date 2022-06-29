@@ -55,10 +55,10 @@
 			<div class="navbar">
 			<nav class="right-box">
 			<ul class="ulright">
-			<li><a href="admin_order.jsp" style="color:red;">전체회원 주문내역</a></li>
-			<li><a href="admin_user.jsp" style="color:red;">전체회원 정보내역</a></li>
-			<li><a href="admin_product.jsp" style="color:red;">전체상품 등록내역</a></li>
-			<li><a href="register-form.jsp" style="color:red;">상품 등록</a></li>
+			<li><a href="admin_order.jsp" style="color:red; font-size:14px;">전체회원 주문내역</a></li>
+			<li><a href="admin_user.jsp" style="color:red;font-size:14px;">전체회원 정보내역</a></li>
+			<li><a href="admin_product.jsp" style="color:red;font-size:14px;">전체상품 등록내역</a></li>
+			<li><a href="register-form.jsp" style="color:red;font-size:14px;">상품 등록</a></li>
 			</ul>
 			</nav>
 			</div>
@@ -72,7 +72,7 @@
 			<nav>
 			<ul class="ulright">
 			<li><%= userID %>님</li>
-			<li><a href="logoutAction.jsp" class="menu-r" style="text-align:right;"><h2>Logout</h2></a></li>
+			<li><a href="logoutAction.jsp" class="menu-r" style="text-align:right;font-size:15px;"><h2>Logout</h2></a></li>
 			<li><a href="checkorder.jsp" class="menu-r" style="margin-left:20px;text-align:right;">Order</a></li>
 			<li><a href="cart.jsp"><img src="images2/bookmark-regular.svg" width="40px" height="30px"></a>
                 <img src="images/menu.png" class="menu-icon" onclick="menutoggle()"></li>

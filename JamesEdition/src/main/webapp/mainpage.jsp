@@ -17,6 +17,7 @@
     <script src="js/jquery-1.11.0.min.js"></script>
 </head>
 <body onload="slider()">
+
 	<%@ include file="nav.jsp" %>
 	 <div class="banner">
             <div class="slider">
@@ -76,13 +77,13 @@
 	
         <h1 class="title">Popular Products</h1>
      	<div class="container">
-		<div class="row" align="center">
+		
 			<%
 				for (int i = 0; i < 4; i++) {
 					Product product = listOfProducts.get(i);
 					
 			%>
-			<div class="col-md-4">
+			<div class="col-md-4" style="width:20%; float:left; margin-left:100px;">
 				<a href="./product.jsp?id=<%=product.getProductId()%>"><img src ="./uploads/<%=product.getOfile1()%>" style ="width: 80%"> </a>
                 <a href="./product.jsp?id=<%=product.getProductId()%>"><h4><%=product.getPname() %></h4></a>
                 <div class="rating">
@@ -97,7 +98,7 @@
 			<%
 				}
 			%>
-		</div>
+		
 		<hr>
 	</div>
 	
@@ -108,13 +109,12 @@
         <h1 class="title">New & Trending</h1>
         
 	<div class="container">
-		<div class="row" align="center">
 			<%
 				for (int i = 0; i < 8; i++) {
 					Product product = listOfProducts.get(i);
 					
 			%>
-			<div class="col-md-4">
+			<div class="col-md-4" style="width:20%; float:left; margin-left:100px;">
 				<a href="./product.jsp?id=<%=product.getProductId()%>"><img src ="./uploads/<%=product.getOfile1()%>" style ="width: 80%"> </a>
                 <a href="./product.jsp?id=<%=product.getProductId()%>"><h4><%=product.getPname() %></h4></a>
                 <div class="rating">
@@ -129,7 +129,6 @@
 			<%
 				}
 			%>
-		</div>
 		<hr>
 	</div>
         
@@ -220,6 +219,7 @@
             </div>
         </div>
     </div>
+    
 	
     <jsp:include page="footer.jsp" />
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>

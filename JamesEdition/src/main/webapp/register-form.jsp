@@ -21,7 +21,7 @@
                 <h2>상품 등록창</h2>
                 <p style="margin-top: 10px; color: red; font-weight: bold;">상품을 등록할때에는 정신을 차리고 집중해서 하자! </p>
             </div>
-            <div class="container">
+            <div class="container" style="justify-content: center;">
                 <div class="contactform">
                    <form action="pwrite.do" method="post" enctype="multipart/form-data" onsubmit="return validateForm(this)">
 			<h3>상품등록</h3>

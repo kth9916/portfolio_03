@@ -57,7 +57,7 @@
 			<div style="display:flex;margin-top:-30px"><h2>현재시간을 표시합니다.</h2><h2 style="margin-left:30px;" id="clock"></h2></div>
 		</div>
 	</div>
-	<div class="container">
+	<div class="container" style="justify-content: center;">
 		<div class="row" style="width:80%;">
 			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
 				<thead>

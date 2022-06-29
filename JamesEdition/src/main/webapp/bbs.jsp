@@ -40,7 +40,7 @@
 		</div>
 	</div>
 	
-	<div class="container">
+	<div class="container" style="justify-content: center;">
 		<div class="row">
 			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd; width:2000px;">
 				<thead>

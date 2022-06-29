@@ -1,5 +1,5 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" session="false"%>
+    pageEncoding="UTF-8" %>
 <%@ page import="java.io.PrintWriter" %>
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="dto.Product"%>
@@ -26,11 +26,8 @@
 </script>
 </head>
 <body>
-	<jsp:include page="nav.jsp" />
-	
-
-
-
+	<%@ include file="nav.jsp"%>
+		
 	<%
 	
 		String id = request.getParameter("id");
@@ -61,16 +58,34 @@
                     </div>
                 </div>
             </div>
-            <div class="col-2">
+			
+			<%
+				if(userID == null) {	
+			%>
+			<div class="col-2">
             <form name="addForm" action="./addCart.jsp?id=<%=product.getProductId()%>" method="post">
                 <div class="p-center">
                 <%=product.getProductId() %> / <p><%=product.getManufacturer() %> / <%=product.getCategory() %></p>
                 <h2><%=product.getPname() %></h2>
                 <h4><%=product.getUnitPrice() %></h4>
                 <p><b>수량</b><input type="text" name="count" value="1" size="3" >
-
-					
-
+                <a href="mainpage.jsp" class="btn" style="width:160px; text-align:center;">상품 목록</a>
+                </div>
+                <h3>Product Details <i class="fa-solid fa-indent"></i></h3>
+                <br><br>
+                <details><%=product.getDescription() %></details>
+               </form>
+            </div>
+        <%
+				}else {	
+			%>
+				<div class="col-2">
+            <form name="addForm" action="./addCart.jsp?id=<%=product.getProductId()%>" method="post">
+                <div class="p-center">
+                <%=product.getProductId() %> / <p><%=product.getManufacturer() %> / <%=product.getCategory() %></p>
+                <h2><%=product.getPname() %></h2>
+                <h4><%=product.getUnitPrice() %></h4>
+                <p><b>수량</b><input type="text" name="count" value="1" size="3" >
                 <a href="#" class="btn btn-info" onclick="addToCart()" style="width:160px; text-align:center;">Add To cart</a> 
                 <a href="./cart.jsp" class="btn" style="width:160px; text-align:center;">go To cart</a>
                 <a href="mainpage.jsp" class="btn" style="width:160px; text-align:center;">상품 목록</a>
@@ -78,14 +93,17 @@
                 <h3>Product Details <i class="fa-solid fa-indent"></i></h3>
                 <br><br>
                 <details><%=product.getDescription() %></details>
-                
-                
                </form>
             </div>
+			<%
+				}	
+			%>
         </div>
     </div>
 </div>
 		
+
+
 <!-- ------- title -------  -->
     <div class="small-container">
         <div class="row row-2">
@@ -108,7 +126,7 @@
 			%>
 
 			<div class="col-4">
-				<a href="./product.jsp?id=<%=product2.getProductId()%>"><img src ="./uploads/<%=product.getOfile1()%>" style ="width: 80%"> </a>
+				<a href="./product.jsp?id=<%=product2.getProductId()%>"><img src ="./uploads/<%=product2.getOfile1()%>" style ="width: 80%"> </a>
                 <a href="./product.jsp?id=<%=product2.getProductId()%>"><h4><%=product2.getPname() %></h4></a>
                 <div class="rating">
                     <i class="fa-solid fa-star"></i>
@@ -119,10 +137,9 @@
                 </div>
                 <p><%=product2.getUnitPrice() %></p>
 			</div>
+		<%} %>
 
-			<%
-				}
-			%>
+			
 		</div>
     </div>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>

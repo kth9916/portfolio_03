@@ -8,7 +8,10 @@
 </head>
 <body>
 <!-- --------- footer ------------  -->
-
+	<div class="floating">
+   	<button type="button" onclick="$('html').animate({scrollTop : 0})" style="width:50px;color:blue; border:0px; padding:0px; margin:0px;"><img alt="" src="images2/Scroll-to-top-button.png" style="width:60px;"></button>
+	</div>
+	
     <div class="footer">
         <div class="contatiner">
             <div class="row">
