@@ -14,10 +14,9 @@
 </head>
 <body>
 	<jsp:include page="nav.jsp" />
-	<div class="container">
 		<div class="row">
-		<form method="post" action="writeAction.jsp">
-		<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd; width:600px">
+		<form method="post" action="writeAction.jsp" style="width:70%;">
+		<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd;">
 				<thead>
 					<tr>
 						<th colspan="2" style="background-color: #eeeeee; text-align: center;">게시판 글쓰기 양식</th>
@@ -28,15 +27,17 @@
 						<td><input type="text" class="from-control" placeholder="글 제목" name="bbsTitle" maxlength="50" style="width: 100%" ></td>
 					</tr>
 					<tr>
-						<td><textarea class="from-control" placeholder="글 내용" name="bbsContent" maxlength="2048" style="height: 350px; width:100%;"></textarea></td>
+						<td><textarea class="from-control" placeholder="글 내용" name="bbsContent" maxlength="2048" style="height: 350px; width:100%;" rows=10 cols=60 wrap=on></textarea></td>
 					</tr>
 				</tbody>
 			</table>
-			<input type="submit" class="btn btn-primary pull-right" value="글쓰기" style="width:100px; text-align: center;">
+			<input type="submit" class="btn btn-primary pull-right" value="글쓰기" style="width:300px; text-align: center;">
 		</form>
 		</div>
-	</div>
+	
+	<jsp:include page="footer.jsp" />
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
+
 </body>
 </html>

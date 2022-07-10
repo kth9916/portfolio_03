@@ -47,9 +47,8 @@
 	}
 	%>
 	<jsp:include page="nav.jsp" />
-	<div class="container">
 		<div class="row">
-		<form method="post" action="updateAction.jsp?bbsID=<%= bbsID %>">
+		<form method="post" action="updateAction.jsp?bbsID=<%= bbsID %>" style="width:70%;">
 		<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
 				<thead>
 					<tr>
@@ -61,15 +60,15 @@
 						<td><input type="text" class="from-control" placeholder="글 제목" name="bbsTitle" maxlength="50" style="width: 100%" value="<%=bbs.getBbsTitle() %>"></td>
 					</tr>
 					<tr>
-						<td><textarea class="from-control" placeholder="글 내용" name="bbsContent" maxlength="2048" style="height: 350px; width:100%;"><%=bbs.getBbsContent() %></textarea></td>
+						<td><textarea class="from-control" placeholder="글 내용" name="bbsContent" maxlength="2048" style="height: 350px; width:100%;" rows=10 cols=60 wrap=on><%=bbs.getBbsContent() %></textarea></td>
 					</tr>
 				</tbody>
 			</table>
-			<input type="submit" class="btn btn-primary pull-right" value="글수정">
+			<input type="submit" class="btn btn-primary pull-right" value="글수정" style="width:300px; text-align: center;">
 		</form>
 		</div>
-	</div>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
+	<jsp:include page="footer.jsp" />
 </body>
 </html>

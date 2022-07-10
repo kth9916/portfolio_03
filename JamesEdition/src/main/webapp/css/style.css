@@ -11,12 +11,9 @@ summary{
 }
 
 
-
-
-
-
 body{
     font-family: 'Roboto Condensed', sans-serif;
+
 }
 .navbar{
     display: flex;
@@ -94,11 +91,12 @@ p{
     animation: zoom 3s linear infinite;
 }
 
+
 .floating {
   position: fixed; 
   right: 35%; 
-  top: 1000px; 
-  margin-right: -720px;
+  top: 65%; 
+  margin-right: -33%;
   text-align:center;
   width: 40px;
 }
@@ -179,6 +177,13 @@ button:hover{
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+.row2 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:80%;
 }
 .col-2{
     flex-basis: 50%;
@@ -380,6 +385,10 @@ h4{
     color: #8a8a8a;
     font-size: 14px;
     padding: 60px 0 20px;
+    position:relative;
+    height: 20%;
+    transform : translateY(140%);
+    margin-top:-5%;
 }
 
 .footer p{
@@ -394,11 +403,14 @@ h4{
     margin-bottom: 20px;
 }
 .footer-col-1{
-    flex-basis: 30%;
+    flex-basis: 20%;
+    margin-left:4%;
 }
 .footer-col-2{
+	flex-basis:40%;
     flex: 1;
     text-align: center;
+    margin-left : 5%;
 }
 .footer-col-2 img{
     width: 180px;
@@ -896,6 +908,15 @@ li.c {
   margin-top: 30px;
   flex-wrap: wrap;
   justify-content: flex-start;
+}
+.container2{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .container .contactinfo{
   width: 50%;

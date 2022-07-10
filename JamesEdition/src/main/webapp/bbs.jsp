@@ -63,7 +63,7 @@
 						<td><%= list.get(i).getUserID() %></td>
 						<td style="text-align:center;"><%= list.get(i).getBbsDate().substring(0, 11) + list.get(i).getBbsDate().substring(11, 13) + "시" + list.get(i).getBbsDate().substring(14, 16) + "분" %></td>
 					</tr>
-					<%
+					<%	
 						}
 					%>
 				</tbody>
@@ -94,8 +94,11 @@
 	%>
 	<a href="write.jsp" class="btn btn-primary">글쓰기</a>
 	<%} %>
+
 	</div>
+	<%@ include file="footer.jsp" %>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
+
 </body>
 </html>

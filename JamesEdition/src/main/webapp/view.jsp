@@ -10,6 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/style.css">
 <title>JSP 게시판 웹사이트</title>
 </head>
 <body>
@@ -32,7 +33,9 @@
 	Bbs bbs = new BbsDAO().getBbs(bbsID);
 	%>
 	<jsp:include page="nav.jsp" />
-	<div style="width:100%; ">
+		<div style="height: 230px;">
+
+		</div>
 		<div class="row">
 		<table class="table table-striped" style="border: 1px solid #dddddd; width:80%" >
 			<thead>
@@ -57,7 +60,7 @@
 			</tbody>
 		</table>
 		</div>
-	</div>
+	
 	<div class="btnarray">
 		<a href="bbs.jsp" class="btn btn-primary">목록</a>
 		<%
@@ -77,5 +80,6 @@
 	
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
+	<jsp:include page="footer.jsp" />
 </body>
 </html>

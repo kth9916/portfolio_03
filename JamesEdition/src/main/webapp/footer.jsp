@@ -1,17 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Insert title here</title>
 </head>
-<body>
 <!-- --------- footer ------------  -->
 	<div class="floating">
    	<button type="button" onclick="$('html').animate({scrollTop : 0})" style="width:50px;color:blue; border:0px; padding:0px; margin:0px;"><img alt="" src="images2/Scroll-to-top-button.png" style="width:60px;"></button>
 	</div>
-	
     <div class="footer">
         <div class="contatiner">
             <div class="row">
@@ -47,8 +46,6 @@
                 </div>
             </div>
             <hr>
-            <p class="copyright">Copyright &copy; 2022 - ±èÅÂÇü</p>
+            <p class="copyright">Copyright &copy; 2022 - ê¹€íƒœí˜•</p>
         </div>
     </div>
-</body>
-</html>

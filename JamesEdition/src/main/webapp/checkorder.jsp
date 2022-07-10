@@ -43,9 +43,9 @@
 			<p><%=userID %>님의 주문목록 페이지입니다. JamesEdition을 이용해주셔서 감사합니다.<br>여러분의 소중한 인생의 따뜻한 쉼터가 되도록 노력하겠습니다.</p>
 		</div>
 	</div>
-	<div class="container">
-		<div class="row">
-			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
+	<div class="container2">
+		<div class="row2">
+			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd;">
 				<thead>
 					<tr>
 						<th style="background-color: #eeeeee; text-align: center;">아이디</th>
@@ -90,5 +90,6 @@
 	</div>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
+	<jsp:include page="footer.jsp" />
 </body>
 </html>

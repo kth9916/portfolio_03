@@ -4,23 +4,24 @@
 <%@ page import="dto.Product"%>
 <%@ page import="dto.ProductDAO"%>
 <%@ page import="java.io.PrintWriter" %>
+<%@page import="java.sql.*"%>
 <jsp:useBean id="user" class="user.User" scope="page" />
 <jsp:setProperty name="user" property="userID" />
 <jsp:setProperty name="user" property="userPassword" />
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>JamesEdition | The World's Luxury Marketplace</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a533d3691d.js" crossorigin="anonymous"></script>
     <script src="js/jquery-1.11.0.min.js"></script>
 
-<%@page import="java.sql.*"%>
-
 <title>장바구니</title>
+
 <%
 String userID = null;
 if (session.getAttribute("userID") != null) {
@@ -48,7 +49,9 @@ pstmt.executeUpdate();
 %>
 <body>
 	<jsp:include page="nav.jsp" />
+		<div style="height: 230px;">
 
+		</div>
 	<div class="small-container cart-page">
 
 	<div>
@@ -126,10 +129,8 @@ pstmt.executeUpdate();
 
 </div>
 	
-
-
-
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
+	<jsp:include page="footer.jsp" />
 </body>
 </html>
