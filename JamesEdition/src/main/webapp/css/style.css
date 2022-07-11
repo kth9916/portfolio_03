@@ -185,6 +185,12 @@ button:hover{
     justify-content: center;
     width:80%;
 }
+.row3 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width:100%;
+}
 .col-2{
     flex-basis: 50%;
     min-width: 300px;

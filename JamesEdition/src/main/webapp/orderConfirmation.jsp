@@ -58,7 +58,7 @@
 		</div>
 	</div>
 
-	<div class="container col-8 alert alert-info" style="border-width:20px;">
+	<div class="container col-8 alert alert-info" style="border-width:20px; justify-content: center;">
 	<form action="./ordercomplete.jsp" method="post">
 		<div class="text-center ">
 			<h1>영수증</h1>

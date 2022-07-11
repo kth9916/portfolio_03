@@ -6,7 +6,6 @@ create table user1(
  userEmail varchar2(50) not null
  );
  
- 
   create table product4(
  productId NUMBER not null,
  pname varchar2(2000) not null,
@@ -19,16 +18,23 @@ create table user1(
  ofile3 varchar2(200),
  ofile4 varchar2(200),
  ofile5 varchar2(200),
- quantity varchar2(50) not null
+ quantity varchar2(50) default 10,
+ realpath1 varchar2(200),
+ realpath2 varchar2(200),
+ realpath3 varchar2(200),
+ realpath4 varchar2(200),
+ realpath5 varchar2(200)
  );
- 
  
 
 create sequence productId
  increment by 1
  start with 1
  
- 
+ create sequence productNum
+ increment by 1
+ start with 1
+
 create table cart(
     name varchar2(200),
     price int,
@@ -55,10 +61,7 @@ create table bbs(
     bbsId int,
     bbsTitle varchar2(200),
     userId varchar2(200),
-    bbsDate date default sysdate,
+    bbsDate date default current_timestamp,
     bbsContent varchar2(2000),
     bbsAvailable int
-    );
-    
-select * from bbs;
-
+    );   

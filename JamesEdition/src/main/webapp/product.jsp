@@ -118,7 +118,7 @@
 	%>
 <!-- ------ products ---------  -->
 		<div class="container">
-        <div class="row" align="center">
+        <div class="row3" align="center">
 			<%
 				for (int i = 0; i < 4; i++) {
 					Product product2 = listOfProducts.get(i);
